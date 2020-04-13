@@ -1,6 +1,6 @@
 #!/bin/bash
 ./hbase/bin/start-hbase.sh
 
-nutch nutchserver > /dev/null &
-nutch webapp
+./$NUTCH_HOME/bin/nutch nutchserver > /dev/null &
+./$NUTCH_HOME/bin/nutch webapp
 
