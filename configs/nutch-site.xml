@@ -30,7 +30,7 @@
     </property>
         <property>
         <name>elastic.host</name>
-        <value>localhost</value>
+        <value>es1</value>
         <description>The hostname to send documents to using TransportClient.
         Either host and port must be defined or cluster.
         </description>
