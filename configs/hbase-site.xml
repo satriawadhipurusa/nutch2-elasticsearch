@@ -24,10 +24,10 @@
 <configuration>
     <property>
         <name>hbase.rootdir</name>
-        <value>file:///Users/satria.adhipurusa/hbase-data</value>
+        <value>file:///root/hbase-data</value>
     </property>
     <property>
         <name>hbase.zookeeper.property.dataDir</name>
-        <value>/Users/satria.adhipurusa/hbase-data/zookeeper</value>
+        <value>/root/hbase-data/zookeeper</value>
     </property>
 </configuration>
