@@ -3,7 +3,7 @@ Nutch is open-source, scalable, production-ready web crwaler based on Apache Had
 
 The crawl cycle consist of 6 steps, Inject, Generate, Fetch, Parse, Updatedb, and Index. Injected URLs from seed will be stored in CrawlDB, and each will be scraped. Then it fetch and parse all scraped content and hyperlinks to store them back into CrawlDB. Lastly those parsed content will be injected into indexing backend.
 
-![nutch](https://mobomo.s3.amazonaws.com/uploads/2017/06/NUTCH1.png)
+![nutch](assets/nutch.png)
 
 # How to Run 
 1. Create directory `nutch_source/urls` with `seed.txt` of urls
