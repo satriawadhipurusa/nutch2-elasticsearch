@@ -7,7 +7,7 @@ The crawl cycle consist of 6 steps, Inject, Generate, Fetch, Parse, Updatedb, an
 ![nutch](https://mobomo.s3.amazonaws.com/uploads/2017/06/NUTCH1.png)
 
 # How to Run 
-1. Create directory `nutch_source/urls` with `seed.txt` of urls
+1. Go to `/configs` to change `seed.txt` or `regex-urlfilter.txt` even `nutch-site.xml` as necessary
 2. Run docker-compose up
 3. The exposable port are:
   - Nutch webbapp in localhost:9500
@@ -24,8 +24,3 @@ nutch index -all
 ```
 
 Happy Crawling!
-
-# TODO
-- Edit crawl script in `$NUTCH_HOME/runtime/local/bin/crawl` to comment out dedup check on Solr
-- Explore Nutch REST API to enable job scheduler via Python 
-- Explore Nutch webapp UI 
