@@ -38,6 +38,7 @@ RUN mkdir urls \
         echo "export PATH=$PATH:$NUTCH_HOME/bin:$JAVA_HOME/bin"; \
         } >> $HOME/.bashrc \
     && cp nutch2-elasticsearch/startup.sh nutch2-elasticsearch/crawl . \
+    && cp nutch2-elasticsearch/crawl $NUTCH_HOME/bin/ \
     && chmod +x startup.sh
 
 EXPOSE 8080
