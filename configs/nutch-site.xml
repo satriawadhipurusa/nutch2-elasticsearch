@@ -25,12 +25,32 @@
         will be ignored. This is an effective way to limit the crawl to include
         only initially injected hosts, without creating complex URLFilters.
         </description>
-    </property>    
+    </property> 
+    
+    <property>
+        <name>parser.timeout</name>
+        <value>180</value>
+        <description>Timeout in seconds for the parsing of a document, otherwise treats it as an exception and 
+        moves on the the following documents. This parameter is applied to any Parser implementation. 
+        Set to -1 to deactivate, bearing in mind that this could cause
+        the parsing to crash because of a very long or corrupted document.
+        </description>
+    </property>       
+
+    <property>
+        <name>fetcher.server.delay</name>
+        <value>5.0</value>
+        <description>The number of seconds the fetcher will delay between 
+        successive requests to the same server. Note that this might get
+        overriden by a Crawl-Delay from a robots.txt and is used ONLY if 
+        fetcher.threads.per.queue is set to 1.
+        </description>
+    </property>  
     
     </property>
         <property>
         <name>elastic.host</name>
-        <value>es1</value>
+        <value>localhost</value>
         <description>The hostname to send documents to using TransportClient.
         Either host and port must be defined or cluster.
         </description>
