@@ -1,0 +1,26 @@
+version: '2'
+
+services:
+
+  nutch:
+    image: custom-nutch
+    build: .
+    ports:
+      - "9500:8080"
+      - "8081:8081"
+    volumes:
+      - ./configs/nutch-site.xml:/root/nutch_service/apache-nutch/runtime/local/conf/nutch-site.xml
+      - ./configs/seed.txt:/root/nutch_service/urls/seed.txt
+      - ./configs/regex-urlfilter.txt:/root/nutch_service/apache-nutch/runtime/local/conf/regex-urlfilter.txt
+      - nutch-data:/root/hbase-data
+  
+  es1:
+    image: elasticsearch:1.4
+    ports:
+      - "9200:9200"
+    volumes: 
+      - elasticsearch-data:/usr/share/elasticsearch/data
+
+volumes:
+  nutch-data:
+  elasticsearch-data:

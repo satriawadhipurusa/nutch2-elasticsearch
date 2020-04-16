@@ -1,9 +1,10 @@
+
 # General
 Nutch is open-source, scalable, production-ready web crwaler based on Apache Hadoop (data structure) and Apache Gora (data storage). In this custom image of [Apache Nutch](http://nutch.apache.org/), we're using HBase as storage and Elasticsearch indexing. 
 
 The crawl cycle consist of 6 steps, Inject, Generate, Fetch, Parse, Updatedb, and Index. Injected URLs from seed will be stored in CrawlDB, and each will be scraped. Then it fetch and parse all scraped content and hyperlinks to store them back into CrawlDB. Lastly those parsed content will be injected into indexing backend.
 
-![nutch](assets/nutch.png)
+![nutch](https://mobomo.s3.amazonaws.com/uploads/2017/06/NUTCH1.png)
 
 # How to Run 
 1. Create directory `nutch_source/urls` with `seed.txt` of urls
@@ -22,4 +23,9 @@ nutch updatedb -all
 nutch index -all
 ```
 
-Happy Crawling! 
+Happy Crawling!
+
+# TODO
+- Edit crawl script in `$NUTCH_HOME/runtime/local/bin/crawl` to comment out dedup check on Solr
+- Explore Nutch REST API to enable job scheduler via Python 
+- Explore Nutch webapp UI 
